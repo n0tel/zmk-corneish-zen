@@ -11,9 +11,25 @@
 
 / {
     chosen {
-        zmk,matrix-transform = &default_transform;
-        // zmk,matrix-transform = &five_column_transform;
+        zmk,matrix-transform = &five_column_transform;
     };
+};
+
+/ {
+        combos {
+                combo_bspc {
+                        timeout-ms = <50>;
+                        key-positions = <15 20>;
+                        layers = <0>;
+                        bindings = <&kp BSPC>;
+                };
+                combo_ret {
+                        timeout-ms = <50>;
+                        key-positions = <16 19>;
+                        layers = <0>;
+                        bindings = <&kp RET>;
+                };
+        };
 };
 
 / {
@@ -33,10 +49,10 @@
 //                            ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯ 
 
             bindings = <
-&none       &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &none
-&none       &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI       &none
-&none       &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH       &none
-            &mt LCTRL ESC &kp SPACE &mo 1   &mo 2 &kp LSHFT &mt LWIN TAB
+       &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          
+       &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI       
+       &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH       
+       &mt LCTRL ESC &kp SPACE &mo 1   &mo 2 &kp LSHFT &mt LWIN TAB
             >;
         };
 
