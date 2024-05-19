@@ -36,7 +36,7 @@
                         layers = <4>;
                         bindings = <&tog 4>;
                 };
-                combo_q {
+              /*  combo_q {
                         timeout-ms = <50>;
                         key-positions = <10 19>;
                         layers = <0>;
@@ -47,7 +47,7 @@
                         key-positions = <11 18>;
                         layers = <0>;
                         bindings = <&kp P>;
-                };
+                }; */
         };
 };
 
@@ -69,7 +69,7 @@
         default_layer {
             display-name = "QWERTY";
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮          ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
-//     LCtrl           W             E             R             T                        Y             U             I             O           LAlt      
+//       Q             W             E             R             T                        Y             U             I             O             P      
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤          ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ 
 //       A             S             D             F             G                        H             J             K             L           ;   Ж  
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤          ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ 
@@ -80,7 +80,7 @@
 //                            ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯ 
 
             bindings = <
-       &kp LCTRL &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp LALT          
+       &kp Q     &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          
        &kp A     &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI       
        &kp Z     &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH       
        &mt LCTRL ESC &kp SPACE &mo 1   &mo 2 &kp LSHFT &mt LWIN TAB
@@ -131,17 +131,17 @@
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮          ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
 //       F1            F2            F3           F4            F5                       F6             F7            F8            F9           F10      
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤          ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ 
-//      ᛒ 0           ᛒ 1           ᛒ 2                        GAME_L                    F11            ⬅️            ⬇️           ⬆️           ➡️
+//                                 LAlt          LCtrl                                   F11            ⬅️            ⬇️           ⬆️           ➡️
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤          ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ 
-//    ᛒ Clear                                                                            F12             
+//      ᛒ 0           ᛒ 1                       ᛒ Clear        GAME_L                    F12             
 //╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤          ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯ 
 //                               LCTRL/ESC                    LAYER_1                  LAYER_2        LSHFT        LWIN/TAB                                          
 //                            ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯ 
                         bindings = <
-       &kp F1       &kp F2       &kp F3       &kp F4       &kp F5     &kp F6  &kp F7   &kp F8   &kp F9 &kp F10   
-       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none        &tog 4     &kp F11 &kp LEFT &kp DOWN &kp UP &kp RIGHT 
-       &bt BT_CLR   &none        &none        &none        &none      &kp F12 &none    &none    &none  &none     
-                          	     &trans       &none        &trans     &trans  &trans   &trans
+       &kp F1         &kp F2       &kp F3       &kp F4      &kp F5    &kp F6  &kp F7   &kp F8   &kp F9 &kp F10   
+       &none          &none        &bt LAlt     &bt LCtrl   &none     &kp F11 &kp LEFT &kp DOWN &kp UP &kp RIGHT 
+       &bt BT_SEL 0   &bt BT_SEL 1 &none        &bt BT_CLR  &tog 4    &kp F12 &none    &none    &none  &none     
+                          	       &trans       &none       &trans    &trans  &trans   &trans
                         >;
                 };
 
